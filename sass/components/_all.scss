@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(241, 214, 248);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #3a1c71, #d76d77, #ffaf7b);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  width: 350px;
+  height: 500px;
+}
+.disply {
+  width: 100%;
+  min-height: 20%;
+  max-height: min-content;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  word-break: break-all;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 20px;
+  font-weight: 500;
+}
+.currentNumber {
+  font-size: 35px;
+}
+.previousNumber {
+  color: rgb(225, 166, 243);
+}
+.mathSign {
+  font-size: 22px;
+}
+.panel {
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  & button {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(241, 214, 248);
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.55);
+    }
+  }
+}
+.equals {
+  grid-row: span 2;
+}
+.calculator-history {
+  width: 350px;
+  padding: 5px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 5px;
+}
+.history-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.history-button {
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgb(241, 214, 248);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  outline: none;
+  display: none;
+}
+.history-button.active {
+  display: block;
+}
+.history {
+  margin-top: 5px;
+}
+.history-item {
+  margin: 3px 0px;
+}
