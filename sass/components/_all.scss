@@ -45,7 +45,7 @@ body {
   color: rgb(225, 166, 243);
 }
 .mathSign {
-  font-size: 22px;
+  font-size: 16px;
 }
 .panel {
   height: 80%;
@@ -60,7 +60,8 @@ body {
     border: none;
     outline: none;
     transition: all 200ms ease-in-out;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: rgba(0, 0, 0, 0.55);
     }
   }
@@ -80,7 +81,7 @@ body {
   align-items: center;
   margin-bottom: 5px;
 }
-.history-button {
+.history-btn {
   font-weight: 500;
   background-color: rgba(0, 0, 0, 0.3);
   color: rgb(241, 214, 248);
@@ -88,13 +89,14 @@ body {
   padding: 5px 10px;
   cursor: pointer;
   transition: all 200ms ease-in-out;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: rgba(0, 0, 0, 0.5);
   }
   outline: none;
   display: none;
 }
-.history-button.active {
+.active {
   display: block;
 }
 .history {
